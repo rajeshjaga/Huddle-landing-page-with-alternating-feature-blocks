@@ -1,204 +1,88 @@
 main {
-  width: 100%;
-
+  height: 100%;
   section {
-    &.s1 {
-      background-image: url(../images/bg-hero-desktop.svg);
-      background-size: 100% 100vh;
-      background-repeat: no-repeat;
+    padding: 0em 4rem;
+    &.hero {
+      min-height: 95vh;
+      background-image: url("/images/bg-hero-desktop.svg");
       background-color: $veryPalCyan;
-      width: 100%;
-      margin: 0 auto;
-      @include breakdown(medium) {
-        background-image: url(../images/bg-hero-mobile.svg);
-        text-align: center;
-      }
+      background-size: cover;
+      padding-bottom: 4em;
       nav {
-        padding: 63px 106px;
-        height: 190px;
-
-        img {
-          height: 40.3px;
-        }
-        a {
-          font-size: 1em;
-          border-radius: 50px;
-          padding: 20.5px 90px;
-          background: $white;
-          color: $veryDarkCyan;
-          box-shadow: $shadowButton;
-        }
+        padding-top: 2em;
+        padding-bottom: 4em;
       }
-
       .container {
-        height: 100vh;
-        width: 80%;
-        overflow: visible;
-        margin: 0 auto;
-        @include breakdown(medium) {
-          flex-direction: column-reverse;
-          img {
-            transform: scale(0.65);
-            object-fit: cover;
-          }
-        }
-        .description {
-          flex: 1;
-          a.cta {
-            display: inline-block;
-            width: fit-content;
-          }
+        flex-direction: row;
+        flex-wrap: wrap;
+        .desc {
+          width: 45%;
           p {
-            display: block;
+            width: 97%;
           }
         }
-        img.mockups {
-          height: 65vh;
+        .mockups {
+          background-image: url(/images/illustration-mockups.svg);
+          background-size: 100% 27rem;
+          height: 27rem;
+          width: 55%;
+          background-repeat: no-repeat;
           object-fit: cover;
-          width: auto;
         }
       }
     }
     &.about {
-      position: relative;
-      height: 100%;
-      margin: 5.9375em 0;
+      flex-direction: column;
+      color: $veryDarkCyan;
       .box-about {
-        display: flex;
-        width: 80%;
-        height: fit-content;
-        margin: 1em auto;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 2em 0;
         background: $white;
-        box-shadow: $shadowButton;
-        padding: 1em 5.9375em;
+        box-shadow: $cardShadow;
+        padding: 3rem 1.81rem;
         border-radius: 10px;
-        @include breakdown(medium) {
-          flex-direction: column;
-          .description.mobile {
-            width: 100%;
-            h3,
-            p {
-              width: 100%;
-            }
-          }
-        }
         .description {
           width: 50%;
+          h3 {
+            font-size: 1.5rem;
+          }
           p {
             color: $grayishBlue;
-            margin: 0 1em 0 0;
           }
         }
         img {
-          height: 20rem;
-          width: auto;
+          height: 19rem;
         }
       }
     }
   }
   footer {
-    background: $veryDarkCyan;
+    width: 100%;
+    height: 100%;
     position: relative;
-    margin-top: 10em;
-    padding: 10em 2em 5em 2em;
-    color: $white;
+    margin-top: 20.3125rem;
     .box-get-started {
       position: absolute;
-      background: $white;
-      width: auto;
-      left: 50%;
+      width: fit-content;
       top: -50%;
-      transform: translate(-50%, 95%);
-      padding: 2.5em 2em;
+      left: 50%;
+      transform: translate(-50%, -10%);
       text-align: center;
+      background: $white;
       border-radius: 10px;
-      box-shadow: 0 -0px 20px rgba(0, 0, 0, 0.07);
-      h1 {
-        color: $veryDarkCyan;
-        font-size: 1.65em;
-        margin-bottom: 2em;
-      }
-      @include breakdown(medium) {
-        padding: auto 1.5em;
-        width: 80%;
-        transform: translate(-50%, 165%);
-        h1 {
-          font-size: 1.25em;
-        }
-        a {
-          font-size: 70%;
-        }
-      }
-      @include breakup(medium) {
-        width: auto;
-        transform: translate(-50%, 70%);
-        h1 {
-          font-size: 2.25rem;
-        }
-        a {
-          font-size: 100%;
-        }
+      padding: 4.5rem 7.875rem;
+      box-shadow: $cardShadow;
+      a {
+        margin: 0 auto;
       }
     }
     .footer__main {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      @include breakdown(medium) {
-        .contacts,
-        .about,
-        .social-links {
-          width: 100%;
-          height: fit-content;
-          margin-top: 1.5em;
-        }
-        .about {
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: start;
-        }
-        .social-links {
-          p {
-            &.copyright {
-              margin-top: 2rem;
-            }
-          }
-        }
-      }
-      .contacts {
-        height: 100%;
-        width: 320px;
-        p {
-          display: inline;
-        }
-        .logo {
-          color: $white;
-          margin: 1em 0;
-        }
-        .address,
-        .phone,
-        .email {
-          margin: 1em 0;
-        }
-      }
-
-      .social-links {
-        .fa-twitter,
-        .fa-instagram,
-        .fa-facebook-f {
-          display: inline-block;
-          border: 1px solid $white;
-          border-radius: 50px;
-          margin: 0 1em;
-          height: 50px;
-          width: 50px;
-          padding: 0.5em;
-        }
-        p {
-          margin-top: 15em;
-        }
-      }
+      background-color: $veryDarkCyan;
+      padding: 11.25rem 4rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
     }
   }
 }
