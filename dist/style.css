@@ -131,16 +131,8 @@ main section.hero nav {
 }
 
 main section.hero .container {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-main section.hero .container .desc {
-  width: 45%;
 }
 
 main section.hero .container .desc p {
@@ -151,7 +143,7 @@ main section.hero .container .mockups {
   background-image: url(/images/illustration-mockups.svg);
   background-size: 100% 27rem;
   height: 27rem;
-  width: 55%;
+  width: auto;
   background-repeat: no-repeat;
   -o-object-fit: cover;
      object-fit: cover;
@@ -366,15 +358,21 @@ main footer .footer__main .social-links p {
   .box-about img {
     max-height: 10rem;
   }
-  .container .desc {
+  .main section.one .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+  .main section.one .container .desc {
     width: 100%;
     text-align: center;
   }
-  .container .desc p,
-  .container .desc a {
+  .main section.one .container .desc p,
+  .main section.one .container .desc a {
     margin: 1em auto;
   }
-  .container .mockups {
+  .main section.one .container .mockups {
     width: 100%;
     background-size: 100% 15rem;
     margin: 1.8rem auto 0;
