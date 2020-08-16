@@ -12,6 +12,27 @@
   a {
     margin: 0 auto;
   }
+  @include breakdown(medium) {
+    padding: 2rem 3rem;
+    width: 70%;
+    transform: translate(-50%, 180%);
+    h1 {
+      font-size: 1.5rem;
+    }
+    a {
+      font-size: 12px;
+    }
+  }
+  @include breakdown(small) {
+    width: 70%;
+    transform: translate(-50%, 200%);
+    h1 {
+      font-size: 1.3rem;
+    }
+    a {
+      font-size: 12px;
+    }
+  }
 }
 .footer__main {
   background-color: $veryDarkCyan;
@@ -68,6 +89,34 @@
     }
     p {
       margin-top: 11rem;
+    }
+  }
+  @include breakdown(medium) {
+    flex-flow: column wrap;
+    .about,
+    .social-links,
+    .contacts {
+      width: 100%;
+    }
+    .social-links {
+      margin-top: 1rem;
+      p {
+        margin-top: 1rem;
+      }
+    }
+    .about {
+      flex-direction: column;
+      > ul {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .social-links {
+      svg {
+        &.fa-facebook-f {
+          margin-left: 0;
+        }
+      }
     }
   }
 }

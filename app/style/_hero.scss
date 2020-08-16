@@ -1,6 +1,9 @@
 nav {
   padding-top: 2em;
   padding-bottom: 4em;
+  img {
+    width: 50%;
+  }
 }
 .container {
   flex-wrap: wrap;
@@ -13,12 +16,37 @@ nav {
   }
   .mockups {
     height: 27rem;
+    // width: 50%;
     width: 50%;
-    width: auto;
     order: 2;
     background-image: url(/images/illustration-mockups.svg);
-    background-size: 27rem;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     object-fit: cover;
+  }
+  @include breakdown(medium) {
+    flex-flow: column wrap;
+    .desc,
+    .mockups {
+      min-width: 100%;
+    }
+    .desc {
+      order: 3;
+      text-align: center;
+      a {
+        margin: 0 auto;
+      }
+    }
+    .mockups {
+      background-size: auto 100%;
+      margin: 0 auto;
+      background-position: center;
+    }
+  }
+  @include breakdown(small) {
+    .mockups {
+      height: 20rem;
+      background-size: auto 55%;
+    }
   }
 }

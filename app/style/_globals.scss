@@ -33,7 +33,7 @@ p {
 a,
 .button {
   font-weight: 700;
-  display: block;
+  display: inline-block;
   text-decoration: none;
   outline: none;
   border: none;
@@ -50,6 +50,14 @@ a,
     background: $white;
     color: $veryDarkCyan;
     padding: 1.125rem 6rem;
+  }
+  @include breakdown(medium) {
+    font-size: 0.8rem;
+
+    &.cta,
+    &.grey-one.o-o {
+      padding: 0.5rem 2rem;
+    }
   }
 }
 .flex {
@@ -76,5 +84,10 @@ li {
 p {
   &.b-i {
     display: inline;
+  }
+}
+@include breakdown(small) {
+  * {
+    font-size: 12px;
   }
 }

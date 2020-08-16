@@ -24,4 +24,16 @@
   &:nth-child(1) {
     flex-direction: row-reverse;
   }
+  @include breakdown(medium) {
+    img {
+      margin: 0 auto;
+      width: 100%;
+      height: auto;
+      background-position: center;
+    }
+    .description {
+      text-align: center;
+      width: 100%;
+    }
+  }
 }

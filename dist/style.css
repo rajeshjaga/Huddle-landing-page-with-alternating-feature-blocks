@@ -40,7 +40,7 @@ p {
 a,
 .button {
   font-weight: 700;
-  display: block;
+  display: inline-block;
   text-decoration: none;
   outline: none;
   border: none;
@@ -65,6 +65,18 @@ a.grey-one,
   background: #fff;
   color: #00252e;
   padding: 1.125rem 6rem;
+}
+
+@media (max-width: 74.9375rem) {
+  a,
+  .button {
+    font-size: 0.8rem;
+  }
+  a.cta, a.grey-one.o-o,
+  .button.cta,
+  .button.grey-one.o-o {
+    padding: 0.5rem 2rem;
+  }
 }
 
 .flex {
@@ -109,6 +121,12 @@ p.b-i {
   display: inline;
 }
 
+@media (max-width: 43.0625rem) {
+  * {
+    font-size: 12px;
+  }
+}
+
 main {
   height: 100%;
 }
@@ -130,6 +148,10 @@ main section.hero nav {
   padding-bottom: 4em;
 }
 
+main section.hero nav img {
+  width: 50%;
+}
+
 main section.hero .container {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -149,15 +171,48 @@ main section.hero .container .desc p {
 main section.hero .container .mockups {
   height: 27rem;
   width: 50%;
-  width: auto;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
   background-image: url(/images/illustration-mockups.svg);
-  background-size: 27rem;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (max-width: 74.9375rem) {
+  main section.hero .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+  main section.hero .container .desc,
+  main section.hero .container .mockups {
+    min-width: 100%;
+  }
+  main section.hero .container .desc {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    text-align: center;
+  }
+  main section.hero .container .desc a {
+    margin: 0 auto;
+  }
+  main section.hero .container .mockups {
+    background-size: auto 100%;
+    margin: 0 auto;
+    background-position: center;
+  }
+}
+
+@media (max-width: 43.0625rem) {
+  main section.hero .container .mockups {
+    height: 20rem;
+    background-size: auto 55%;
+  }
 }
 
 main section.about {
@@ -213,6 +268,19 @@ main section.about .box-about:nth-child(1) {
           flex-direction: row-reverse;
 }
 
+@media (max-width: 74.9375rem) {
+  main section.about .box-about img {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    background-position: center;
+  }
+  main section.about .box-about .description {
+    text-align: center;
+    width: 100%;
+  }
+}
+
 main footer {
   width: 100%;
   height: 100%;
@@ -239,6 +307,35 @@ main footer .box-get-started {
 
 main footer .box-get-started a {
   margin: 0 auto;
+}
+
+@media (max-width: 74.9375rem) {
+  main footer .box-get-started {
+    padding: 2rem 3rem;
+    width: 70%;
+    -webkit-transform: translate(-50%, 180%);
+            transform: translate(-50%, 180%);
+  }
+  main footer .box-get-started h1 {
+    font-size: 1.5rem;
+  }
+  main footer .box-get-started a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 43.0625rem) {
+  main footer .box-get-started {
+    width: 70%;
+    -webkit-transform: translate(-50%, 200%);
+            transform: translate(-50%, 200%);
+  }
+  main footer .box-get-started h1 {
+    font-size: 1.3rem;
+  }
+  main footer .box-get-started a {
+    font-size: 12px;
+  }
 }
 
 main footer .footer__main {
@@ -321,5 +418,38 @@ main footer .footer__main .social-links svg.fa-facebook-f:hover, main footer .fo
 
 main footer .footer__main .social-links p {
   margin-top: 11rem;
+}
+
+@media (max-width: 74.9375rem) {
+  main footer .footer__main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+  main footer .footer__main .about,
+  main footer .footer__main .social-links,
+  main footer .footer__main .contacts {
+    width: 100%;
+  }
+  main footer .footer__main .social-links {
+    margin-top: 1rem;
+  }
+  main footer .footer__main .social-links p {
+    margin-top: 1rem;
+  }
+  main footer .footer__main .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main footer .footer__main .about > ul {
+    margin: 0;
+    padding: 0;
+  }
+  main footer .footer__main .social-links svg.fa-facebook-f {
+    margin-left: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
