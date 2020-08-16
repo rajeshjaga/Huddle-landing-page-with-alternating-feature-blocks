@@ -135,15 +135,26 @@ main section.hero .container {
       flex-wrap: wrap;
 }
 
+main section.hero .container .desc {
+  width: 50%;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
 main section.hero .container .desc p {
   width: 97%;
 }
 
 main section.hero .container .mockups {
-  background-image: url(/images/illustration-mockups.svg);
-  background-size: 100% 27rem;
   height: 27rem;
+  width: 50%;
   width: auto;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  background-image: url(/images/illustration-mockups.svg);
+  background-size: 27rem;
   background-repeat: no-repeat;
   -o-object-fit: cover;
      object-fit: cover;
@@ -310,89 +321,5 @@ main footer .footer__main .social-links svg.fa-facebook-f:hover, main footer .fo
 
 main footer .footer__main .social-links p {
   margin-top: 11rem;
-}
-
-@media (max-width: 74.9375rem) {
-  * > a {
-    white-space: nowrap;
-    font-size: 0.6875rem;
-    padding: 1.5em 2em;
-  }
-  * > a.o-o.grey-one {
-    padding: 0.75rem 1.5rem;
-  }
-  nav img {
-    height: 1.5rem;
-  }
-  nav a.cta {
-    padding: 1em 2em;
-  }
-  .box-get-started {
-    width: 80%;
-    -webkit-transform: translate(-50%, 120%);
-            transform: translate(-50%, 120%);
-    padding: 3.375rem 1.8125rem;
-  }
-  .box-get-started h1 {
-    font-size: 1.128rem;
-  }
-  .box-get-started a {
-    font-size: 0.6875rem;
-  }
-  .box-about {
-    width: 100%;
-  }
-  .box-about .description {
-    width: 80%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .box-about .description h1 {
-    font-size: 1.128rem;
-  }
-  .box-about .description p {
-    font-size: 0.6875rem;
-  }
-  .box-about img {
-    max-height: 10rem;
-  }
-  .main section.one .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column wrap;
-            flex-flow: column wrap;
-  }
-  .main section.one .container .desc {
-    width: 100%;
-    text-align: center;
-  }
-  .main section.one .container .desc p,
-  .main section.one .container .desc a {
-    margin: 1em auto;
-  }
-  .main section.one .container .mockups {
-    width: 100%;
-    background-size: 100% 15rem;
-    margin: 1.8rem auto 0;
-  }
-  .footer__main {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .footer__main .contacts,
-  .footer__main .about {
-    min-width: 100%;
-  }
-}
-
-@media (max-width: 43.0625rem) {
-  .box-about img {
-    width: auto;
-    max-height: 10rem;
-  }
 }
 /*# sourceMappingURL=style.css.map */

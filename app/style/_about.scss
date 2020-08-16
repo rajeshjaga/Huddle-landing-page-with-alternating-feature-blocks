@@ -1,0 +1,27 @@
+.box-about {
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 2em 0;
+  background: $white;
+  box-shadow: $cardShadow;
+  padding: 3rem 1.81rem;
+  border-radius: 10px;
+  .description {
+    width: 50%;
+    h3 {
+      font-size: 1.5rem;
+    }
+    p {
+      color: $grayishBlue;
+    }
+  }
+  img {
+    height: 19rem;
+  }
+  &:nth-child(3) {
+    flex-direction: row-reverse;
+  }
+  &:nth-child(1) {
+    flex-direction: row-reverse;
+  }
+}
